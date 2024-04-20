@@ -9,8 +9,8 @@ apt-get install -y apt-transport-https ca-certificates curl software-properties-
 # 添加Docker的官方APT仓库的GPG密钥
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-# 添加Docker的官方APT仓库
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+# 自动确认添加Docker的官方APT仓库
+add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 # 更新APT包索引以包含Docker的仓库
 apt-get update
